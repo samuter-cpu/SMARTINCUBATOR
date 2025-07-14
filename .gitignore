@@ -1,0 +1,17 @@
+*.pbd
+*.dep
+*.ewd
+*.ewt
+*.bak
+*.log
+*.lst
+*.map
+*.hex
+*.bin
+*.obj
+*.lnk
+*.exe
+*.txt
+Output/
+Debug/
+Release/
