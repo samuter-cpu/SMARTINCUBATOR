@@ -1,33 +1,40 @@
-# AGENTS.md – Jules AI Instructions
+# AGENTS.md â€“ Jules AI Instructions
 
 ## ?? Project Purpose
 Automate egg incubation and hatching using EK-TM4C1294XL, EWARM, and QPC framework. Control temperature, humidity, CO2, motor rotation, ventilation, and UI with reactive active objects and sensor events.
 
 ## ?? Key Files
-- `Source/main.c` – System startup, AO initialization
-- `Source/bsp.c` – Peripheral setup, ISRs, onStartup/onIdle
-- `Source/temperature_ctrl.c` – Active object for thermal control
-- `Source/humidity_ctrl.c` – Humidity control logic
-- `Source/co2_ctrl.c` – Air quality control and ventilation trigger
-- `Source/motor_ctrl.c` – Rack motor logic, directional timers
-- `Source/lcd_display.c` – Dual I²C display handler
-- `Source/hatch_mode.c` – Mode switch to hatching logic
-- `Include/incubator_hatcher.h` – Signals, prototypes, event structures
-
+- `Source/main.c` â€“ System startup, AO initialization
+- `Source/bsp.c` â€“ Peripheral setup, ISRs, onStartup/onIdle
+- `Include/bsp.h` 
+- `Source/TemperatureControl.c` â€“ Active object for thermal control
+- `Include/TemperatureControl.h`
+- `Source/HumidityControl.c` â€“ Humidity control logic
+- `Include/HumidityControl.h` 
+- `Source/Co2Control.c` â€“ Air quality control and ventilation trigger
+- `Include/Co2Control.h`  
+- `Source/MotorControl.c` â€“ Rack motor logic, directional timers
+- `Include/MotorControl.h`
+- `Source/LcdDisplay.c` â€“ Dual IÂ²C display handler
+- `Include/LcdDisplay.h` â€“ Dual IÂ²C display handler 
+- `Source/HatchMode.c` â€“ Mode switch to hatching logic WITH HEADER
+- `Include/incubatorHatcher.h` â€“ Signals, prototypes, event structures
+- `Source/AlarmControl.c` Alarms on lcd blink and buzzer
+- `Include/AlarmControl.h`
+- And other files
 ## ?? Sensors & Actuators
-- `DHT11` – Internal + external temp/humidity
-- `SCD30` or `MH-Z19C` – CO2 + O2 sensors (suggested)
-- `FS300A` or `SDP3x` – Airflow sensors (suggested)
-- `28BYJ-48 Stepper` – Rack motor
+- `DHT11` â€“ Internal + external temp/humidity
+- `SCD30` or `MH-Z19C` â€“ CO2 + O2 sensors (suggested)
+- `FS300A` or `SDP3x` â€“ Airflow sensors (suggested)
+- `28BYJ-48 Stepper` â€“ Rack motor
 - `PWM Heater`, `Valve-controlled Cooler`, `Ultrasonic Humidifier`
-- `Active Buzzer`, `I²C LCDs`, `Ventilation Fans`
+- `Active Buzzer`, `IÂ²C LCDs`, 
+-rtc timer
 
 ## ?? Tasks for Jules AI
 
 ### 1. Documentation
-- Summarize state machines in `temperature_ctrl.c`, `humidity_ctrl.c`, `co2_ctrl.c`
-- Describe AO interactions and event signals in `incubator_hatcher.h`
-- Map mode transitions (Incubation ? Hatch) from `hatch_mode.c`
+check and finish the unfinished or incomplet ones
 
 ### 2. Visualization
 - Generate flowcharts for control logic and AO coordination in `/Docs/statecharts.md`
@@ -39,10 +46,10 @@ Automate egg incubation and hatching using EK-TM4C1294XL, EWARM, and QPC framewo
 - Suggest abstraction layers for sensor publishing
 
 ## ?? Safety Events
-- Trigger `AlarmControl` AO for temperature/humidity deviation > ±1.5°C/10% RH for > 3 minutes
+- Trigger `AlarmControl` AO for temperature/humidity deviation > Â±1.5Â°C/10% RH for > 3 minutes
 - Activate buzzer and LCD blinking until user override or sensor recovery
 
 ## ?? Restrictions
 - Do NOT modify `.ewp`, `.ewd`, or external libraries (TI / QPC core folders)
 - Keep IAR compatibility intact
-
+## use texas instruments libray and qpc 
