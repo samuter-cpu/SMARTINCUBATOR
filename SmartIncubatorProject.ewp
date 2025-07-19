@@ -2152,6 +2152,27 @@
     </group>
     <group>
         <name>Include</name>
+        <file>
+            <name>$PROJ_DIR$\AlarmControl.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\bsp.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Co2Control.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\IncubatorHatcher.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\MotorControl.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Priorities.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\VentilationControl.h</name>
+        </file>
     </group>
     <group>
         <name>QP</name>
@@ -2218,6 +2239,39 @@
     </group>
     <group>
         <name>Source</name>
+        <file>
+            <name>$PROJ_DIR$\AlarmControl.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\bsp.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\bsp_pwm.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Co2Control.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HatchMode.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HumidityControl.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\LcdDisplay.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\main.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\MotorControl.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\TemperetureControl.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\VentilationControl.c</name>
+        </file>
     </group>
     <group>
         <name>TM4C1294</name>
