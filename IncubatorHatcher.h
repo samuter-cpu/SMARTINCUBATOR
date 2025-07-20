@@ -106,3 +106,5 @@ extern QActive * const AO_AlarmControl;
 extern QActive * const AO_HatchMode;
 
 #endif // INCUBATOR_HATCHER_H
+
+

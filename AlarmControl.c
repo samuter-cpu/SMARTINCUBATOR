@@ -69,3 +69,4 @@ static QState AlarmControl_alarming(AlarmControl * const me, QEvt const * const 
     }
     return status;
 }
+

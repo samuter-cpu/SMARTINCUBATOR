@@ -114,3 +114,5 @@ static QState LcdDisplay_alarm(LcdDisplay * const me, QEvt const * const e) {
     }
     return status;
 }
+
+

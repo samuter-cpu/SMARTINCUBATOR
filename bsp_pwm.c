@@ -101,3 +101,5 @@ void BSP_setCoolerPower(float dutyPercent) {
     uint32_t pulse = (uint32_t)((dutyPercent / 100.0f) * load);
     PWMPulseWidthSet(COOLER_PWM_BASE, COOLER_PWM_OUT, pulse);
 }
+
+

@@ -21,3 +21,4 @@ float apply_PI_control(PIController *ctrl, float current_value) {
 
     return duty;
 }
+
