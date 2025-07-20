@@ -31,7 +31,7 @@ This guide walks through flashing, configuring, and running the embedded firmwar
 ## ?? Flashing Firmware
 
 1. Connect EK-TM4C1294XL via USB.
-2. Select ìDownload and Debugî in IAR EWARM.
+2. Select ‚ÄúDownload and Debug‚Äù in IAR EWARM.
 3. Monitor device COM port via terminal (e.g., PuTTY) at 115200 baud.
 4. Watch for startup messages like:
    - `"System Init Complete"`
@@ -43,7 +43,7 @@ This guide walks through flashing, configuring, and running the embedded firmwar
 
 ### Mode Initialization
 - System boots in Incubation Mode
-- Internal temperature set to 37.1∞C, humidity to 56%
+- Internal temperature set to 37.1¬∞C, humidity to 56%
 - LCD 1 displays temperature and humidity
 - LCD 2 displays countdown timer and CO2/O2 levels
 
@@ -52,7 +52,7 @@ This guide walks through flashing, configuring, and running the embedded firmwar
 - Switch 2: Decrease set temperature/humidity
 
 ### Egg Rack Motor
-- Begins 180∞ cycle every 45 minutes
+- Begins 180¬∞ cycle every 45 minutes
 
 ---
 
@@ -69,7 +69,7 @@ This guide walks through flashing, configuring, and running the embedded firmwar
 
 | Issue                      | Cause / Fix                                      |
 |---------------------------|--------------------------------------------------|
-| LCD not displaying         | Check I≤C wiring and address                     |
+| LCD not displaying         | Check I¬≤C wiring and address                     |
 | No sensor data             | Ensure DHT11/CO2 sensor connections are correct |
 | Motor not rotating         | Check 28BYJ-48 driver logic and power supply    |
 | No UART log output         | Confirm terminal settings and USB enumeration   |

@@ -1,26 +1,27 @@
-# AGENTS.md – Jules AI Instructions
+# AGENTS.md â€“ Jules AI Instructions
 
 ## ?? Project Purpose
 Automate egg incubation and hatching using EK-TM4C1294XL, EWARM, and QPC framework. Control temperature, humidity, CO2, motor rotation, ventilation, and UI with reactive active objects and sensor events.
 
 ## ?? Key Files
-- `Source/main.c` – System startup, AO initialization
-- `Source/bsp.c` – Peripheral setup, ISRs, onStartup/onIdle
-- `Source/temperature_ctrl.c` – Active object for thermal control
-- `Source/humidity_ctrl.c` – Humidity control logic
-- `Source/co2_ctrl.c` – Air quality control and ventilation trigger
-- `Source/motor_ctrl.c` – Rack motor logic, directional timers
-- `Source/lcd_display.c` – Dual I²C display handler
-- `Source/hatch_mode.c` – Mode switch to hatching logic
-- `Include/incubator_hatcher.h` – Signals, prototypes, event structures
+- `Source/main.c` â€“ System startup, AO initialization
+- `Source/bsp.c` â€“ Peripheral setup, ISRs, onStartup/onIdle
+- `Source/TemperatureControl.c` â€“ Active object for thermal control
+- `Source/humidityControl.c` â€“ Humidity control logic
+- `Source/Co2Control.c` â€“ Air quality control and ventilation trigger
+- `Source/MotorControl.c` â€“ Rack motor logic, directional timers
+- `Source/LcdDisplay.c` â€“ Dual IÂ²C display handler
+- `Source/HatchMode.c` â€“ Mode switch to hatching logic
+- `Include/IncubatorHatcher.h` â€“ Signals, prototypes, event structures
+-and others 
 
 ## ?? Sensors & Actuators
-- `DHT11` – Internal + external temp/humidity
-- `SCD30` or `MH-Z19C` – CO2 + O2 sensors (suggested)
-- `FS300A` or `SDP3x` – Airflow sensors (suggested)
-- `28BYJ-48 Stepper` – Rack motor
+- `DHT11` â€“ Internal + external temp/humidity
+- `SCD30` or `MH-Z19C` â€“ CO2 + O2 sensors (suggested)
+- `FS300A` or `SDP3x` â€“ Airflow sensors (suggested)
+- `28BYJ-48 Stepper` â€“ Rack motor
 - `PWM Heater`, `Valve-controlled Cooler`, `Ultrasonic Humidifier`
-- `Active Buzzer`, `I²C LCDs`, `Ventilation Fans`
+- `Active Buzzer`, `IÂ²C LCDs`, `Ventilation Fans`
 
 ## ?? Tasks for Jules AI
 
@@ -39,7 +40,7 @@ Automate egg incubation and hatching using EK-TM4C1294XL, EWARM, and QPC framewo
 - Suggest abstraction layers for sensor publishing
 
 ## ?? Safety Events
-- Trigger `AlarmControl` AO for temperature/humidity deviation > ±1.5°C/10% RH for > 3 minutes
+- Trigger `AlarmControl` AO for temperature/humidity deviation > Â±1.5Â°C/10% RH for > 3 minutes
 - Activate buzzer and LCD blinking until user override or sensor recovery
 
 ## ?? Restrictions
