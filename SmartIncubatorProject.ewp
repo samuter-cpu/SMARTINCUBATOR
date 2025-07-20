@@ -2267,7 +2267,7 @@
             <name>$PROJ_DIR$\MotorControl.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\TemperetureControl.c</name>
+            <name>$PROJ_DIR$\TemperatureControl.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\VentilationControl.c</name>
